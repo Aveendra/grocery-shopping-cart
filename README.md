@@ -13,12 +13,12 @@ Grocery is a shoping cart that built using react. You can select the grocery ite
 
 
 ## Installing
-* Download the project. 
-* Run from projects's root folder `npm install`
-* Run from projects's root folder `npm install webpack -g`
-* Run from projects's root folder `npm install http-server -g`
-* Run with a separate command window (CMD) from the project root folder `webpack --config webpack.dev.js -w -d`
-* Run with a separate command window (CMD) from the project root folder `http-server`
+* Clone or Download the project. 
+* Run the command from projects's root folder `npm install`
+* Run the command from projects's root folder `npm install webpack -g`
+* Run the command from projects's root folder `npm install http-server -g`
+* Run the command from project's root folder `webpack --config webpack.dev.js`
+* Run the command from project's root folder `http-server`
 
 ## License
 Copyright (c) 2017 Aveendra Thilakarathna  
