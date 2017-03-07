@@ -20,6 +20,10 @@ Grocery is a shoping cart that built using react. You can select the grocery ite
 * Run the command from project's root folder `webpack --config webpack.dev.js`
 * Run the command from project's root folder `http-server`
 
-## License
+## Screen Caputures
+Screen captures of the application are inside the "screen-shots" folder
+`/screen-shots`
+
+### License
 Copyright (c) 2017 Aveendra Thilakarathna  
 Licensed under the MIT license.
