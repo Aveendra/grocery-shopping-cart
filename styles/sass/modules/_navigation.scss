@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/*==================================
+=            Navigation            =
+==================================*/
+
+#nav{
+	@extend .left-wide;
+	background: {
+		color: $blue;
+	}
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+}
+
+/*=====  End of Navigation  ======*/

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.absolute-center {
+  position : absolute;
+  text-align: center;
+  top:0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  margin: auto;
+}
+
+.cover-bg{
+  background: {
+    size : cover;
+    repeat: no-repeat;
+    position: center;
+  }
+}
+
+.vertical-center{
+    margin: auto;
+    top: 50%;
+    position: relative;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.left-wide{
+	float: left;
+	width: 100%;
+}
+
+.right-wide{
+	float: left;
+	width: 100%;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none; 
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/*========================================
+=            No search result            =
+========================================*/
+
+#no-result{
+	text-align: center;
+	margin-bottom: 40px;
+	.icon{
+		margin-bottom: 40px;
+	}
+	h2{
+		margin-bottom: 15px;
+	}
+	p{}
+	.chips{
+		list-style: none;
+		padding: 0;
+		margin: 30px 0 0;
+		li{
+			display: inline-block;
+			a{
+				display: inline-block;
+				font-weight: 500;
+				background: $white;
+				border: 1px solid $border-color;
+				line-height: 1;
+				padding: 12px 15px;
+				@include border-radius(3px);
+			}
+		}
+	}
+
+	.col{
+		float: none;
+		margin: auto;
+	}
+}
+
+/*=====  End of No search result  ======*/

@@ -1,0 +1,738 @@
+@charset "UTF-8";
+
+/*=====================================
+=            Common Styles            =
+=====================================*/
+
+header,footer,section,article{
+	@extend .left-wide;
+}
+
+img{
+	max-width: 100%;
+}
+
+/* Form Control */
+.form-control{
+	@include box-shadow(none !important);
+	@include border-radius(2px);
+	border-color: $border-color;
+	max-width: 100%;
+	height: 37px;
+	padding: 6px 12px;
+	@include prefix(appearance, none, moz webkit o ms);
+	&:focus{
+		border-color: $green;
+	}
+
+	&[disabled], 
+	&[readonly]{
+		background-color: $gray;
+	}
+}
+fieldset[disabled] .form-control{
+	background-color: $gray;
+}
+
+textarea.form-control {
+    height: auto;
+    padding: 12px;
+}
+
+/*=====  End of Common Styles  ======*/
+
+/*==============================
+=            Labels            =
+==============================*/
+
+label{
+	font-weight: 500;
+
+	&.input-field{
+		@extend .left-wide;
+		margin-bottom: 15px;
+		> span{
+			@extend .left-wide;
+			margin-bottom: 8px;
+		}
+		> .form-control{
+			@extend .left-wide;
+			font-weight: 400;
+		}		
+	}
+
+	&.info-field{
+		p{
+			color: $light-gray;
+			font-weight: 400;
+			line-height: 1.7;
+		}
+	}
+}
+
+/*=====  End of Labels  ======*/
+
+
+/*==================================
+=            Anchor Tag            =
+==================================*/
+
+a{
+	color: $green;
+	@include transition(all, 0.1s, ease-in);
+	text-decoration: none !important;
+	&:hover, &:focus{
+		color: $green - 20;
+	}
+}
+
+/*=====  End of Anchor Tag  ======*/
+
+
+/*===============================
+=            Buttons            =
+===============================*/
+
+.btn{
+	@extend .no-select;
+	@include border-radius(2px);
+	@include transition(background, 0.1s, ease-in);
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 8px 15px;
+	border: transparent;
+	outline: none !important;
+	text-align: center;
+	display: inline-block;
+	
+	/* Colors */
+	&.btn-default{
+		background-color: $dark-gray;
+		color: $black;
+		&:focus,&:hover{
+			background-color: $dark-gray -  20;
+		}
+	}
+	&.btn-white{
+		background-color: $white;
+		color: $green;
+		&:focus,&:hover{
+			background-color: $green -  20;
+			color: $white;
+		}
+	}
+	&.btn-green{
+		background-color: $green;
+		color: $white;
+		&:focus,&:hover{
+			background-color: $green -  20;
+			color: $white;
+		}
+	}
+
+	&.btn-disabled{
+		background-color: #e0e0e0 !important;
+		color: $black !important;
+		cursor: not-allowed;
+	}
+	
+	&.btn-sm{
+	    padding: 5px 10px 3px;
+	}
+	&.btn-xl{
+		padding: 14px 25px;
+		max-height: 43px;
+	}
+	&.btn-xxl{
+		padding: 16px 25px;
+		font-size: 14px;
+		font-weight: 500;
+	}
+
+	.btn-loader{
+		img,svg{
+			height: 30px;	
+		}
+	}
+}
+
+.btn-loader,
+.btn-loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.btn-loader {
+  margin: -3px auto 0;
+  font-size: 2px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/*=====  End of Buttons  ======*/
+
+
+/*============================
+=            Icon            =
+============================*/
+
+.icon{
+	@extend .no-select;
+	position: relative;
+	display: inline-block;
+	&:before{
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 9;
+	}
+}
+
+/*=====  End of Icon  ======*/
+
+
+/*=============================
+=            Cards            =
+=============================*/
+
+.card-with-icon{
+	text-align: center;
+	background: {
+		color: $white;
+	}
+	padding: 30px;
+	border: 1px solid $border-color;
+	@include border-radius(2px);
+
+	@media screen and (max-width: 480px) {
+		width: 70%;
+	}
+
+	@media screen and (max-width: 425px) {
+		width: 90%;
+	}
+	.icon{
+		@extend .left-wide;
+		margin-bottom: 30px;
+		img{
+			max-height: 120px;
+		}
+	}
+	.heading{
+		@extend .left-wide;
+		font-size: 15px;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+	.description{
+		@extend .left-wide;
+		margin-bottom: 20px;
+	}
+}
+
+
+/*=====  End of Cards  ======*/
+
+
+/*=============================
+=            Modal            =
+=============================*/
+
+.modal{
+	position: fixed;
+	z-index: 999;
+	overflow: auto;
+	.overlay{
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background: #0b1123;
+		opacity: 0.3;
+	}
+
+	&.cart-modal-window{
+
+		.cart-modal{
+			@include border-radius(2px);
+			@include prefix(box-shadow, 0px 5px 5px 0px rgba(0, 0, 0, 0.12), moz webkit o ms);
+			position: absolute;
+			z-index: 9999;
+			margin: auto auto 100px;
+			top: 20%;
+			left: 0;
+			right: 0;
+			background: $white;
+			padding: 40px;
+			width: 90%;
+			max-width: 600px;
+			overflow: hidden;
+ 
+			/* Modal Close */
+			.modal-close{
+				$size : 25px;
+				position: absolute;
+				right: 15px;
+				top: 15px;
+				text-align: center;
+				cursor: pointer;
+				@extend .no-select;
+				z-index: 999;
+			}
+				
+			/* Cart Modal Content */
+			.cart-modal-content{
+				@extend .left-wide;
+				background: $white;
+				.content{
+					@extend .left-wide;
+				}
+			}
+
+			/* Cart Modal Header */
+			.cart-modal-header{
+				@extend .left-wide;
+				text-align: center;
+				border-bottom: 1px solid $border-color;
+				padding: 0 0 29px;
+				margin: 0 0 15px;
+				line-height: 1;
+				h2{
+					@extend .left-wide;
+					margin-bottom: 10px;
+				}
+				p{
+					@extend .left-wide;
+					color: $light-gray;
+					line-height: 1.7;
+				}
+			}
+		}
+
+		&.modal-md{
+			.cart-modal{
+				width: 90%;
+				max-width: 700px;
+			}
+		}
+
+	}
+}
+
+/*=====  End of Modal  ======*/
+
+
+/*=========================================
+=            Cart Product Chip            =
+=========================================*/
+
+/* Item */		
+.cart-itm{
+	@extend .left-wide;
+	@include border-radius(2px);
+	$item_height : 102px;
+	$img_width : 78px;
+	$img_height : 73px;
+	background: $white;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #e5e5e5;
+	position: relative;
+	height: $item_height;
+	padding: 15px;
+	margin-top: -1px;
+	@include prefix(transition, all 0.2s ease-out, moz webkit ms);
+	@media screen and (max-width: 680px) {
+		height: $item_height + 20px;
+	}
+	@media screen and (max-width: 424px) {
+		height: $item_height + 40px;
+	}
+
+	/* Item Remove animation */
+	&:global(.removed){
+		opacity: 0;
+	    height: 0;
+	    padding: 0 15px;
+	    margin: 0;
+	}
+
+
+	.cont{
+		@extend .left-wide;
+		height: $item_height - 30;
+
+		.qty{
+			float: left;
+			height: 100%;
+			text-align: center;
+		    margin-top: -10px;
+		    z-index: 5;
+		    padding: 0;
+			span{
+				$size : 30px;
+				@extend .left-wide;
+				@include border-radius(100%);
+				float: left;
+				clear: both;
+				position: relative;
+				text-align: center;
+				cursor: pointer;
+				font-size: 13px;
+				height: $size;
+				line-height: $size;
+				width: $size;
+				visibility: hidden;
+				
+				i{
+					font-style: normal;
+				}
+
+				&:hover,&:focus{
+					visibility: visible;
+					color: $green;
+				}
+
+				&.count{
+					visibility: visible;
+					font-weight: 600;
+				 	margin: 2px 0;
+				    color: $white;
+					background: {
+						color: $green;
+					}
+				}
+			}
+
+			@media screen and (max-width: 768px) {
+				span{
+					visibility: visible;
+				}
+			}
+
+			@media screen and (max-width: 425px) {
+				height: auto;
+				margin-top: 0;
+				margin-left: 70px;
+				span{
+					clear: none;
+					margin: 2px 0 !important;
+					visibility: visible;
+				}
+			}
+		}
+
+		.product-data{
+			@extend .left-wide;
+			
+			position: relative;
+			float: left;
+			@include prefix(width, calc(100% - 35%), moz webkit ms);
+			height: inherit;
+
+			@media screen and (max-width: 998px) {
+				@include prefix(width, calc(100% - 40%), moz webkit ms);
+			}
+
+			@media screen and (max-width: 425px) {
+				width: 100%;
+			}
+			.img{
+				float: left;
+				position: relative;
+				text-align: center;
+				width: 70px;
+				height: $item_height - 30;
+				&:before{
+					content: "";
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					z-index: 9;
+				}
+				img{
+					position: absolute;
+					max-height: 70px;
+					max-width: 100%;
+					margin: auto;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					@extend .no-select;
+				}
+			}
+			.data{
+				float: left;
+				@include prefix(width, calc(100% - 70px), moz webkit ms);
+				padding: 5px 10px;
+				.name{
+					color: $black;
+					font-weight: 500;
+					&:after{
+						content: "—";
+						margin-left: 5px;
+					}
+				}
+				.description{
+					color: $light-gray;
+					float: left;
+					p{
+						margin-bottom: 3px;
+					}
+				}
+				.size{
+					@extend .left-wide;
+					font-weight: 500;
+					color: $black;
+				}
+			}
+		}
+		.pricing{
+			float: right;
+			height: 100%;
+			position: relative;
+			@include prefix(width, calc(35% - 35px), moz webkit ms);
+			@media screen and (max-width: 998px) {
+				@include prefix(width, calc(40% - 35px), moz webkit ms);
+			}
+			text-align: right;
+			padding: 5px 0;
+			span{
+				@extend .left-wide;
+				@extend .vertical-center;
+				margin-bottom: 5px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				&.ptotal{
+					font-size: 14px;
+					font-weight: 600;
+				}
+				&.psave{
+					font-size: 11px;
+					font-weight: 500;
+					color: $green;
+				}
+				&.psize{
+					font-size: 12px;
+					font-weight: 500;
+					text-decoration: line-through;
+					color: $red;
+				}
+			}
+
+			@media screen and (max-width: 425px) {
+				height: 34px;
+				@include prefix(width, calc(100% - 160px), moz webkit ms);
+			}
+		}
+	}
+
+	/* Close Button */
+	.close-btn{
+		$size : 20px;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		background: $gray;
+		color: $black;
+		font-size: 7px;
+		text-align: center;
+		width: $size;
+		height: $size;
+		line-height: $size + 2px;
+		@include border-radius(100%);
+		display: none;
+		cursor: pointer;
+		&:hover,&:focus{
+			background: $gray - 10;
+		}
+		@media screen and (max-width: 768px) {
+			display: block;
+		}
+	}
+
+	/* HOVER STATE */
+	&:hover,&:focus{
+		.cont{
+			.qty{
+				span{
+					visibility: visible !important;
+				}						
+			}
+		}
+		.close-btn{
+			display: block;
+		}
+	}
+}
+
+/*=====  End of Cart Product Chip  ======*/
+
+
+/*==============================
+=            Window            =
+==============================*/
+
+.window{
+	@extend .left-wide;
+	@include border-radius(2px);
+	overflow: hidden;
+	margin-bottom: 30px;
+	border: 1px solid $border-color;
+	.heading{
+		@extend .left-wide;
+		background: $dark-gray;
+		padding: 15px 30px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	.content{
+		@extend .left-wide;
+		background: $white;
+		padding: 30px;
+	}
+}
+
+/*=====  End of Window  ======*/
+
+
+
+/*==============================
+=            Alerts            =
+==============================*/
+
+.alert{
+	@include border-radius(2px);
+	padding: 8px 20px;
+	margin-bottom: 15px;
+	.icon{
+		margin-right: 5px;
+		img{
+			height: 18px;
+		}
+	}
+	
+	&.alert-success{
+		background: #e4eedd;
+		border-color: #c7e0b3;
+		color: $green;
+	}
+
+	&.alert-transparent{
+		background: transparent;
+	}
+}
+
+/*=====  End of Alerts  ======*/
+
+
+
+/*==============================
+=            Toggle            =
+==============================*/
+
+$toggleheight : 25px;
+
+.cmn-toggle {
+	position: absolute;
+	margin-left: -9999px;
+	visibility: hidden;
+}
+
+input.cmn-toggle-round + label {
+	padding: 2px;
+	width: 55px;
+	height: $toggleheight - 2;
+  	@include border-radius(60px);
+  	position: relative;
+  	cursor: pointer;
+}
+input.cmn-toggle-round + label:before, input.cmn-toggle-round + label:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	content: "";
+}
+input.cmn-toggle-round + label:before {
+	right: 1px;
+	background-color: #e8e8e8;
+	@include border-radius(60px);
+	@include prefix(transition, background 0.3s, moz webkit o ms);
+}
+input.cmn-toggle-round + label:after {
+	font-family: $fontawesome;
+	font-size: 10px;
+	text-align: center;
+	line-height: $toggleheight;
+	height: $toggleheight;
+	width: $toggleheight;
+	margin-top: -1px;
+	color: $green;
+	background-color: $white;
+	@include border-radius(100%);
+	@include prefix(box-shadow, 0 2px 5px rgba(0, 0, 0, 0.3), moz webkit o ms);
+	@include prefix(transition, all 0.3s, moz webkit o ms);
+}
+input.cmn-toggle-round:checked + label:before {
+	background-color: $green;
+}
+input.cmn-toggle-round:checked + label:after {
+	margin-left: 30px;
+	content: "\f00c";
+}
+
+
+/*=====  End of Toggle  ======*/

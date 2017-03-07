@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/*==============================
+=            colors            =
+==============================*/
+
+$white : #ffffff;
+$black : #333333;
+$light-gray : #808080;
+$gray : #f8f7f4;
+$dark-gray : #e8e8e8;
+$green : #07c748;
+$red : #e80434;
+$orange : #f46d00;
+
+/* Text colors */
+.white{color: $white;}
+.black{color: $black;}
+.light-gray{color: $light-gray;}
+.gray{color: $gray;}
+.dark-gray{color: $dark-gray;}
+.green{color: $green;}
+.red{color: $red;}
+.orange{color: $orange;}
+
+/* BG colors */
+.white-bg{background-color: $white;}
+.black-bg{background-color: $black;}
+.light-gray-bg{background-color: $light-gray;}
+.gray-bg{background-color: $gray;}
+.dark-gray-bg{background-color: $dark-gray;}
+.green-bg{background-color: $green;}
+.red-bg{background-color: $red;}
+.orange-bg{background-color: $orange;}
+
+/*=====  End of colors  ======*/

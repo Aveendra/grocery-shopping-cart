@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+/*==============================
+=            Footer            =
+==============================*/
+
+footer{
+    a{
+        color: $footer-text-color;
+        font-weight: 500;
+        text-decoration: none !important;
+        &:hover,&:focus{
+            color: $green;
+        }
+    }
+
+    /* Request Items */
+    .request-items{
+        @extend .left-wide;
+        .top{
+            @extend .left-wide;
+            height: 250px;
+            background: {
+                image : url(../../img/req-itm-grphc.png);
+                position: center bottom;
+                repeat: no-repeat;
+                size : contain;
+            }
+
+            @media screen and (max-width: 426px) {
+                background: {
+                    size : 80%;
+                }
+            }
+        }
+        .bottom{
+            @extend .left-wide;
+            background: $white;
+            padding: 45px 0 45px;
+            .col{
+                float: none;
+                margin: auto;
+                text-align: center;
+                .heading{
+                    @extend .left-wide;
+                    margin-bottom: 10px;
+                }
+                p{
+                    @extend .left-wide;
+                    color: $light-gray;
+                    margin-bottom: 40px;
+                }
+                .btn{
+                    min-width: 185px;
+                }
+                span{
+                    @extend .left-wide;
+                    margin-top: 15px;
+                    color: $light-gray;
+                    i{
+                        @extend .left-wide;
+                        margin-bottom: 15px;
+                        font-style: normal;
+                    }
+                    a{
+                        font-weight: 400;
+                        color: $light-gray;
+                        &:hover,&:focus{
+                            color: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Copyrights */
+    .copyrights{
+        @extend .left-wide;
+        background: $white;
+        .container{
+            border-top: 1px solid #ebebeb;
+        }
+        .footer-logo{
+            float: left;
+            width: 105px;
+            height: $footer-height;
+            margin: 0 30px 0 0;
+            font-size: 25px;
+            line-height: $footer-height;
+            color: $light-gray;
+            text-transform: uppercase;
+        }
+        .copyright-txt{
+            float: left;
+            height: $footer-height;
+            line-height: $footer-height;
+            color: $footer-text-color;
+            font-weight: 400;
+            a{
+                font-weight: 400;
+                &:before{
+                    content: "/";
+                    margin: 0 5px 0 8px;
+                }
+            }
+        }
+        .help-desk{
+            float: right;
+            line-height: $footer-height;
+            color: $footer-text-color;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .social-links{
+            @extend .no-select;
+            float: right;
+            list-style: none;
+            margin: 19px 0 0 15px;
+            padding: 0;
+            $size : 30px;
+            li{
+                display: inline-block;
+                margin: 0 0 0 5px;
+                a{
+                    float: left;
+                    background: #eaeaea;
+                    color: #959595;
+                    height: $size;
+                    width: $size;
+                    line-height: $size;
+                    text-align: center;
+                    @include border-radius(100%);
+                    &:hover,&:focus{
+                        background: $green;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+
+        @media screen and (max-width: 580px) {
+            text-align: center;
+
+            .footer-logo{
+                float: none;
+                margin: auto;
+                display: inline-block;
+            }
+
+            .copyright-txt{
+                float: left;
+                width: 100%;
+                text-align: center;
+                line-height: 2.2;
+                height: auto;
+                a{
+                    font-weight: 400;
+                    width: 100%;
+                    float: left;
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+
+            .help-desk{
+                width: 100%;
+            }
+            .social-links{
+                width: 100%;
+                float: right;
+                list-style: none;
+                margin: 30px 0 0 0;
+                padding: 0;
+                $size : 30px;
+                li{
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    &.inner-page{
+        border-top: 1px solid $border-color;
+        .copyrights{
+            .container{
+                border: none;
+            }
+        }
+    }
+
+}
+
+/*=====  End of Footer  ======*/

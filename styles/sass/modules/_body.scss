@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/*============================
+=            Body            =
+============================*/
+
+html{
+	margin: 0 !important;
+}
+
+body{
+	font-family: $base-font;
+	font-size: $base-font-size;
+	background: {
+		color: $base-bg-color;
+	}
+	color: $base-color;
+  padding-top: $header-height;
+	
+	&.cart-open{
+		overflow: hidden;
+	}
+}
+
+/*=====  End of Body  ======*/
+
+
+/*============================
+=            Loader          =
+============================*/
+.loader-wrap {
+    position: absolute;
+    margin: auto;
+    color: #07c748;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    left: 0;
+    right: 0;
+    top: 40%;
+}
+
+.loader-wrap span {
+    font-size: 36px;
+    margin-top: 25px;
+    float: left;
+    width: 100%;
+    font-weight: 400;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: $green;
+  border-radius: 3px;
+
+  margin: auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+
+/*=====  End of Loader  ======*/

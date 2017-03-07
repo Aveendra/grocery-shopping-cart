@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/*==============================
+=            Header          =
+==============================*/
+
+header#header{
+	height: $header-height;
+  	background: $green;
+  	color: $white;
+  	position: fixed;
+  	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	@include prefix(transition, box-shadow 0.2s ease, moz webkit o ms);
+
+  	*{
+  		@extend .no-select;
+  	}
+
+  	&:global(.fixed-header){
+  		@include prefix(box-shadow, 0px 0px 10px 2px rgba(0, 0, 0, 0.12), moz webkit o ms);
+  	}
+}
+
+/*=====  End of Header======*/
+
+
+/*============================
+=            Logo            =
+============================*/
+
+#logo{
+	float: left;
+	width: 125px;
+	height: $header-height;
+	margin: 0 0 0;
+	color: $white;
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/*=====  End of Logo  ======*/
+
+
+/*==================================
+=            Search box            =
+==================================*/
+
+.search-box{
+	float: left;
+	margin: 8px 0 0;
+	position: relative;
+	.form-control{
+		border: none;
+		padding-right: 45px;
+	}
+
+	.input-form{
+		position: relative;
+	}
+
+	@media screen and (max-width: 750px) {
+		display: none;
+	}
+}
+
+.search-btn{
+	position: absolute;
+	width: 45px;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: {
+		color: transparent;
+		image : url(../../img/search.svg);
+		size: 15px;
+		repeat: no-repeat;
+		position: center;
+	}
+	border: none;
+	@include prefix(appearance, none, moz webkit o ms);
+	outline: none;
+}
+
+#mobile-search{
+	display: none;
+	$height : 45px;
+	background: $white;
+	height: $height;
+	position: relative;
+	z-index: 9;
+	@include prefix(box-shadow, 0px 1px 10px 0px rgba(0, 0, 0, 0.10), moz webkit o ms);
+
+	.input-form{
+		height: inherit;
+		position: relative;
+		.form-control{
+			height: $height;
+			line-height: $height;
+			border: none;
+			font-size: 13px;
+    		padding: 0;
+    		padding-right: 35px;
+		}
+
+		.search-btn{
+			width: 35px;
+			@extend .search-btn;
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		display: block;
+	}
+}
+
+/*=====  End of Search box  ======*/
+
+
+/*=================================
+=            Cart Wrap            =
+=================================*/
+
+.cart-wrap{
+	$cart-height: 32px;
+
+	float: right;
+	text-transform: uppercase;
+	font-size: 11px;
+
+	a{
+		color: $white;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	/* Login */
+	.login{
+		float: left;
+		border: 1px solid;
+		@include border-radius(2px);
+		margin: 14px 0 0;
+	}
+
+	/* User Name */
+	.user-name{
+		float: left;
+		text-transform: uppercase;
+		font-weight: 600;
+		height: $header-height;
+		line-height: $header-height;
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
+	}
+
+	/* Cart */
+	.cart{
+		@extend .no-select;
+		@include border-radius(2px);
+		float: left;
+		margin: 11px 0 0 15px;
+		padding: 0 15px 0 18px;
+		background: {
+			color: $green - 20;
+		}
+		height: $cart-height;
+		line-height: $cart-height;
+		cursor: pointer;
+		font-weight: 500;
+		.total{
+			float: left;
+			position: relative;
+			.price{
+				font-style: normal;
+				font-size: 13px;
+				position: relative;
+				@media screen and (max-width: 426px) {
+			    	margin: 0 0 0 15px;
+			    }
+			}
+
+		}
+		.icon{
+			float: left;
+			margin: 0 10px 0 0;
+			position: relative;
+			height: $cart-height;
+			line-height: $cart-height;
+			@media screen and (max-width: 426px) {
+				margin: 0;
+			}
+			.icon-cart{
+    			float: left;
+				font-size: 17px;
+				margin-top: 7px;
+			}
+			.count{
+				$size : 20px;
+				position: absolute;
+				bottom: 2px;
+			    top: 0;
+			    //left: -5px;
+				margin: auto;
+				margin-left: -33px;
+				background-color: $orange;
+				color: $white;
+				height: $size;
+				line-height: $size;
+				width: $size;
+				text-align: center;
+				font-style: normal;
+				font-size: 10px;
+				@include border-radius(100%);
+				font-family: $roboto;
+				padding: 0;
+			}
+		}
+		.checkout{
+			float: left;
+			position: relative;
+			padding: 0 0 0 15px;
+			line-height: $cart-height + 1;
+			margin-left: 15px;
+			&:before{
+				content: "";
+				width: 1px;
+				position: absolute;
+				background: $green + 10;
+				height: 60%;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				@media screen and (max-width: 426px) {
+			    	display: none;
+			    }
+			}
+			@media screen and (max-width: 426px) {
+		    	display: none;
+		    }
+		}
+	}
+
+	/* Empty Cart */
+	&.empty-cart{
+		.cart{
+			background: #438e06;
+			padding: 0 15px;
+			.total{
+				display: none;
+			}
+			.icon{
+				margin: 0 15px 0 0;
+				@media screen and (max-width: 426px) {
+					margin: 0;
+				}
+				.count{
+					display: none;
+				}
+			}
+			.checkout{
+				&:before{
+					content: "";
+					width: 1px;
+					position: absolute;
+					background: #9bc37b;
+					height: 60%;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+				}
+			}
+		}
+	}
+
+	/* User Logged IN */
+	&.logged-in{
+		.login{
+			display: none;
+		}
+	}
+
+	/* User NOT logged in */
+	&.not-logged-in{
+		.user-name{
+			display: none;
+		}
+	}
+}
+
+/*=====  End of Cart Wrap  ======*/

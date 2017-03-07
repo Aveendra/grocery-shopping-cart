@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+/*====================================
+=            Page Order Placed       =
+====================================*/
+
+.order-placed{
+	@extend .left-wide;
+	text-align: center;
+	
+	.thank-you-card{
+		display: inline-block;
+		float: none;
+		margin: auto;
+		@include prefix(animation-delay, 0.6s, moz webkit ms);
+	}
+
+	.after-blocks{
+		@extend .left-wide;
+		margin-bottom: 60px;
+
+		.col{
+			.content{
+				text-align: center;
+				.heading{
+					@extend .left-wide;
+					font-weight: 600;
+					font-size: 16px;
+					margin-bottom: 30px;
+				}
+				.icon{
+					@extend .left-wide;
+					margin-bottom: 30px;
+					height: 80px;
+					img{
+						max-height: 100%;
+					}
+				}
+				.description{
+					@extend .left-wide;
+					margin-bottom: 30px;
+				}
+				.btn{
+					opacity: 0;
+				}
+			}
+
+
+			&:hover{
+				.content{
+					.btn{
+						opacity: 1;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 769px) {
+			.col{
+				.content{
+					.btn{
+						opacity: 1;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 481px) {
+			.col{
+				width: 100%;
+				padding-bottom: 40px;
+				margin-bottom: 40px;
+				border-bottom: 1px dotted $border-color;
+				&:last-child{
+					margin-bottom: 0;
+					padding: 0;
+					border: none;
+				}
+				.content{
+					.btn{
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+.alert-box{
+	@extend .left-wide;
+	border-bottom: 1px dotted $border-color;
+    padding-bottom: 60px;
+    margin-bottom: 100px;
+	.icon{
+		@extend .left-wide;
+		margin-bottom: 30px;
+		@include prefix(animation-delay, 0.3s, moz webkit ms);
+	}
+	h1{
+		@extend .left-wide;
+		font-size: 23px;
+		margin-bottom: 10px;
+		@include prefix(animation-delay, 0.4s, moz webkit ms);
+	}
+	p{
+		@extend .left-wide;
+		@include prefix(animation-delay, 0.5s, moz webkit ms);
+	}
+	.note{
+		@extend .left-wide;
+		margin-top: 15px;
+		padding-top: 15px;
+		font-weight: 600;
+		font-size: 16px;
+		@include prefix(animation-delay, 0.6s, moz webkit ms);
+	}
+}
+
+/*====  End of Page Order Placed ====*/

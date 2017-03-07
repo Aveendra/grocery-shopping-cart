@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="description" content="Keywords">
+    <meta name="author" content="Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Grocery - Personalised grocery experience</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" >
+    <link rel="stylesheet" href="./styles/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./fonts/homecart/homecart.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/css/loader.css">
+</head>
+<body>
+    <div class="hc-container">
+        <div class="loader-wrap">
+            <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+            </div>
+            <span>Grocery</span>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="./scripts/bundles/entry-hc-checkout.js?v=1.1"></script>
+        <script>
+        var data = JSON.parse(localStorage.data);
+        /*Initialize the JS*/
+        new HwrldCheckout('.hc-container', data);
+        </script>
+        <script src="./scripts/common/jquery.custom.js?v=1.1"></script>
+    </body>
+</html>

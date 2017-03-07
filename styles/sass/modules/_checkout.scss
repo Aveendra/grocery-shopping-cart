@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/*================================
+=            Checkout            =
+================================*/
+
+#checkout-page{
+	@extend .left-wide;
+}
+
+/*=====  End of Checkout  ======*/
+
+
+/*=================================
+=            Your Cart            =
+=================================*/
+
+.your-cart{
+	float: left;
+	@media screen and (max-width: 991px) {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+	}
+	.header{
+		@extend .left-wide;
+		h1{
+			@extend .left-wide;
+			margin: 0 0 5px;
+			i{
+				font-style: normal;
+				float: right;
+				text-transform: none;
+			}
+		}
+		.item-count{
+			@extend .left-wide;
+		    color: $green;
+		    text-transform: uppercase;
+		    font-weight: 600;
+		    margin: 0 0 10px;
+		    i{
+		    	font-style: normal;
+		    	float: right;
+		    	text-transform: none;
+		    	color: $black;
+		    	font-size: 17px;
+		    }
+		}
+		p{
+			@extend .left-wide;
+			margin: 0 0 30px;
+			border-top: 1px solid $border-color;
+			padding-top: 10px;
+			color: $light-gray;
+		}
+	}
+	.item-list{
+		@extend .left-wide;
+	}
+	.cart-footer{
+		@extend .left-wide;
+		border-top: 1px solid $border-color;
+		margin: 25px 0 0;
+	}
+}
+
+.validation-error{
+	border-color: $red;
+	color: $red;
+	font-weight: normal;
+}
+
+/*=====  End of Your Cart  ======*/
+
+
+/*===============================
+=            Billing            =
+===============================*/
+
+
+
+/*=====  End of Billing  ======*/
+
+
+/*=======================================
+=            Delivery Banner            =
+=======================================*/
+
+.delivery-banner{
+	@extend .left-wide;
+	@include border-radius(2px);
+	margin-bottom: 30px;
+	background: $white;
+	border : 1px solid $border-color;
+	position: relative;
+	$icon-height : 65px;
+	$icon-width : 158px;
+	padding: 15px 15px 14px;
+	a{
+		color: $green;
+		text-transform: uppercase;
+		border-bottom: 2px solid;
+		font-weight: 600;
+	}
+	.icon{
+		position: absolute;
+		height: $icon-height;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		margin: auto;
+		img{
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+	.data{
+		float: left;
+		width: 75%;
+		padding: 0 0 0 $icon-width;
+		h3{
+			@extend .left-wide;
+			font-size: 15px;
+			margin-bottom: 8px;
+		}
+		p{
+			@extend .left-wide;
+			margin: 0;
+			line-height: 1.6;
+		}
+		a{
+			float: left;
+			clear: both;
+			margin-top: 10px;
+			display: none;
+		}
+	}
+	.actions{
+		float: left;
+		width: 25%;
+		text-align: right;
+		height: $icon-height;
+		position: relative;
+		a{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
+
+	@media screen and (max-width: 1199px) {
+		.data{
+			float: left;
+			width: 100%;
+			padding: 0 0 0 $icon-width;
+			h3{}
+			p{}
+			a{
+				display: block;
+			}
+		}
+		.actions{
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.icon{
+			display: none;
+		}
+		.data{
+			padding: 0 0;
+		}
+	}
+}
+
+/*=====  End of Delivery Banner  ======*/
+
+
+
+/*========================================
+=            Delivery Details            =
+========================================*/
+
+.delivery-details{
+	@extend .left-wide;
+	background: $white;
+	@include border-radius(2px);
+	overflow: hidden;
+	border: 1px solid $border-color;
+	margin-bottom: 30px;
+
+	.heading{
+		@extend .left-wide;
+		background: $dark-gray;
+		padding: 15px 30px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.form{
+		@extend .left-wide;
+		padding: 30px 30px 35px;
+
+		.alert{
+			border: none;
+			padding-left: 0;
+			margin-bottom: 20px;
+		}
+
+		.payment-methods{
+			@extend .left-wide;
+			margin: 15px 0 5px;
+			> h5{
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.switch{
+		@extend .left-wide;
+		margin: 0 0 30px 0;
+		label{
+			float: right;
+			margin: 0 0 0 15px;
+		}
+		span{
+			float: left;
+			margin-top: 3px;
+			width: 80%;
+			input{
+				margin: 2px 5px 0 0;
+				float: left; 
+			}
+		}
+	}
+}
+
+.delivery-footer{
+	margin-top: 10px;
+	.col{
+		float: left;
+		.btn{
+			width: 100%;
+		}
+	}
+	.info{
+		position: relative;
+		padding: 4px 15px;
+		$icon : 60px;
+		.icon{
+			position: absolute;
+			width: $icon;
+			img{
+				max-width: 100%;
+			}
+		}
+		p{
+			@extend .left-wide;
+			padding-left: $icon;
+			color: $light-gray;
+			line-height: 1.7;
+		}
+	}
+}
+
+/*=====  End of Delivery Details  ======*/
+
+
+/*====================================
+=            No invitaion            =
+====================================*/
+
+.no-invitation{
+	.content{
+		padding: 40px 30px;
+		text-align: center;
+		.icon{
+			@extend .left-wide;
+			margin-bottom: 30px;
+			img{
+				max-width: 110px;
+			}
+		}
+		h4{
+			@extend .left-wide;
+			margin-bottom: 10px;
+		}
+		p{
+			@extend .left-wide;
+			margin-bottom: 30px;
+			color: $light-gray;
+		}
+	}
+}
+
+/*=====  End of No invitaion  ======*/

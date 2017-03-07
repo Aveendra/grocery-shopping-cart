@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*========================================
+=            Empty Cart Placeholder      =
+========================================*/
+
+.empty-cart-placeholder{
+	text-align: center;
+	@extend .vertical-center;
+	.icon{
+		margin-bottom: 30px;
+	}
+	.title{
+		margin-bottom: 10px;
+	}
+	p{
+		margin-bottom: 30px;
+	}
+	&.left-panel{
+		transform: inherit;
+	}
+}
+
+/*=====  End of Empty Cart Placeholder==*/
+

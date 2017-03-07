@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/*====================================
+=            Welcome Note            =
+====================================*/
+
+#welcome-window{
+	padding: 45px 0 60px;
+	.heading{
+		@extend .left-wide;
+		text-align: center;
+		margin: 0 0 35px;
+	}
+
+	/* Steps */
+	.steps{
+		@extend .left-wide;
+		.wrap{
+			float: none;
+			margin: auto;
+
+			.block{
+				position: relative;
+				$icon-size : 50px;
+				.icon{
+					float: left;
+					color: $green;
+					font-size: 45px;
+					position: absolute;
+					.icon-headphone{
+						font-size: 38px;
+					}
+					> span{
+						position: absolute;
+						left: 0;
+						top: 0;
+					}
+					img {
+					    vertical-align: top;
+					}
+				}
+				.txt{
+					@extend .left-wide;
+					float: left;
+					padding-left: $icon-size;
+					color: $light-gray;
+					font-weight: 400;
+					p{max-width: 210px;}
+				}
+
+				&.step-2{
+					.txt{
+						padding-left: $icon-size + 10px;
+					}
+				}
+
+				&.step-3{
+					.txt{
+						padding-left: $icon-size + 3px;
+					}
+				}
+			}
+		}
+	}
+	
+	@media screen and (max-width: 580px) {
+		display: none;
+	}
+}
+
+/*=====  End of Welcome Note  ======*/

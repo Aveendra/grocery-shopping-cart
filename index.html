@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta charset="utf-8">
+        <meta name="description" content="Keywords">
+        <meta name="author" content="Name">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <title>Grocery - Personalised grocery experience</title>
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" >
+        <link rel="stylesheet" href="./styles/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./fonts/homecart/homecart.css">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/css/loader.css">
+    </head>
+    <body>
+        <div class="hc-container">
+            <div class="loader-wrap">
+                <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+                </div>
+                <span>Grocery</span>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="./scripts/bundles/entry-hc-home-cart.js?v=1.1"></script>
+        <script>
+            var data = { "items":[ { "unit_value":"82g Packet", "price":"7", "name":"Maggi", "image":"./img/products/thumb/maggi-dev.png", "id":"421", "description":"Devilled Chicken instant noodles", "cart_count":0 }, { "unit_value":"200g Packet", "price":"20", "name":"Harischandra", "image":"./img/products/thumb/coffee.png", "id":"597", "description":"Coffee", "cart_count":0 }, { "unit_value":"100g", "price":"4", "name":"Lifebuoy", "image":"./img/products/thumb/lifebuoy.png", "id":"621", "description":"Red Total Soap", "cart_count":0 }, { "unit_value":"500ml", "price":"2", "name":"Coca Cola", "image":"./img/products/thumb/coke.png", "id":"785", "description":"Drinl", "cart_count":0 }, { "unit_value":"Packet", "price":"5", "name":"Prima", "image":"./img/products/thumb/kottumee.png", "id":"648", "description":"Kottumee Hot & Spicy Noodles", "cart_count":0 }, { "unit_value":"500g Packet", "price":"10", "name":"Prima", "image":"./img/products/thumb/bread.png", "id":"239", "description":"Sunrise bread - Normal", "cart_count":0 }, { "unit_value":"150g Pack", "price":"5", "name":"Keells", "image":"./img/products/thumb/keels-sausages.png", "id":"1320", "description":"Chicken Sausages", "cart_count":0 }, { "unit_value":"200g Packet", "price":"20", "name":"Harischandra", "image":"./img/products/thumb/coffee.png", "id":"557", "description":"Coffee", "cart_count":0 }, { "unit_value":"100g", "price":"4", "name":"Lifebuoy", "image":"./img/products/thumb/lifebuoy.png", "id":"612", "description":"Red Total Soap", "cart_count":0 }, { "unit_value":"500ml", "price":"2", "name":"Coca Cola", "image":"./img/products/thumb/coke.png", "id":"7211", "description":"Drinl", "cart_count":0 }, { "unit_value":"Packet", "price":"5", "name":"Prima", "image":"./img/products/thumb/kottumee.png", "id":"823", "description":"Kottumee Hot & Spicy Noodles", "cart_count":0 }, { "unit_value":"500g Packet", "price":"10", "name":"Prima", "image":"./img/products/thumb/bread.png", "id":"565", "description":"Sunrise bread - Normal", "cart_count":0 } ], "cart":[ ], "user":{ "type":"3", "details":{ "name":"Guest" } } };
+            
+            /*Initialize the JS*/
+            new HwrldHomeCart('.hc-container', data);
+        </script>
+        <script src="./scripts/common/jquery.custom.js?v=1.1"></script>
+
+    </body>
+</html>
+

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/*================================
+=            Paddings            =
+================================*/
+
+/* Top & Bottom */
+.p-tb{padding: 15px 0}
+.p-tb-xs{padding: 5px 0}
+.p-tb-md{padding: 30px 0}
+.p-tb-lg{padding: 40px 0}
+.p-tb-xl{padding: 60px 0}
+.p-tb-xxl{padding: 80px 0}
+.p-tb-xxxl{padding: 100px 0}
+
+/*=====  End of Paddings  ======*/
+
+
+/*===================================
+=            Text styles            =
+===================================*/
+
+.strikethrough,.overline{
+	text-decoration: line-through;
+}
+
+/*=====  End of Text styles  ======*/

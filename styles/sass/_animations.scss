@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+:global(.animate){
+	@include prefix(animation-duration, 0.5s, moz webkit ms);
+	@include prefix(animation-fill-mode, both, moz webkit ms);
+}
+
+/*================================
+=            FadeInUp            =
+================================*/
+
+:global(.fadeInUp){
+	@include prefix(animation-name, fadeInUp, moz webkit ms);
+}
+
+@include keyframes(fadeInUp) {
+  0%   { opacity: 0; transform: translate(0, 20px);}
+  100% { opacity: 1; transform: none;}
+}
+
+/*=====  End of FadeInUp  ======*/
+
+
+/*=========================================
+=            SideBar Animation            =
+=========================================*/
+
+:global(.sidebarAnimation){
+	@include prefix(animation-duration, 0.3s, moz webkit ms);
+	@include prefix(animation-name, sidebarAnimation, moz webkit ms);
+}
+
+:global(.sidebarAnimationExit){
+	@include prefix(animation-duration, 0.3s, moz webkit ms);
+	@include prefix(animation-name, sidebarAnimationExit, moz webkit ms);
+}
+
+:global(.cartOverlayEnter){
+	@include prefix(animation-duration, 0.3s, moz webkit ms);
+	@include prefix(animation-name, cartOverlayEnter, moz webkit ms);
+}
+
+:global(.cartOverlayExit){
+	@include prefix(animation-duration, 0.3s, moz webkit ms);
+	@include prefix(animation-name, cartOverlayExit, moz webkit ms);
+}
+
+@include keyframes(sidebarAnimation) {
+  0%   { opacity: 0; transform: translate(50%, 0px);}
+  100% { opacity: 1; transform: none;}
+}
+
+@include keyframes(sidebarAnimationExit) {
+  0% { opacity: 1; transform: none;}
+  100%   { opacity: 0; transform: translate(50%, 0px);}
+}
+
+@include keyframes(cartOverlayEnter) {
+  0%   { opacity: 0;}
+  100% { opacity: 0.5;}
+}
+
+@include keyframes(cartOverlayExit) {
+  0% { opacity: 0.5;}
+  100%   { opacity: 0;}
+}
+
+/*=====  End of SideBar Animation  ======*/
+
+
+/*=====================================
+=            Modal Windows            =
+=====================================*/
+
+.modalEnter{
+	@include prefix(animation-duration, 0.1s, moz webkit ms);
+	@include prefix(animation-name, modalEnter, moz webkit ms);
+}
+
+@include keyframes(modalEnter) {
+  0%   { opacity: 0;}
+  100% { opacity: 0.5;}
+}
+
+/*=====  End of Modal Windows  ======*/
