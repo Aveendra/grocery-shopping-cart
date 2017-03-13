@@ -1,7 +1,7 @@
 # Grocery Cart
 Grocery is a shoping cart that built using react. You can select the grocery items from the landing page and place the orders.
 
-## Technologies
+## Stack
 * React
 * ES6
 * Redux and Flux
